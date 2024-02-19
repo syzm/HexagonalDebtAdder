@@ -1,6 +1,5 @@
 package com.example.springhexagonal.adapters.api;
 
-import com.example.springhexagonal.domain.model.Client;
 import com.example.springhexagonal.domain.model.ClientId;
 import com.example.springhexagonal.domain.model.Debt;
 import com.example.springhexagonal.domain.ports.in.ClientService;
