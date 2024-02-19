@@ -1,5 +1,8 @@
 package com.example.springhexagonal.domain.model;
 
+import lombok.Getter;
+
+@Getter
 public class Money {
     private final double value;
 
@@ -9,9 +12,5 @@ public class Money {
 
     public static Money of(final double money) {
         return new Money(money);
-    }
-
-    public double value() {
-        return value;
     }
 }

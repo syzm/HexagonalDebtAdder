@@ -1,6 +1,9 @@
 package com.example.springhexagonal.domain.model;
 
 
+import lombok.Getter;
+
+@Getter
 public class ClientId {
     private final String value;
 
@@ -10,9 +13,5 @@ public class ClientId {
 
     public static ClientId of(final String clientId) {
         return new ClientId(clientId);
-    }
-
-    public String value() {
-        return value;
     }
 }
