@@ -7,19 +7,23 @@ import com.example.springhexagonal.domain.model.Email;
 import com.example.springhexagonal.domain.ports.out.ClientRepository;
 import lombok.RequiredArgsConstructor;
 
-@RequiredArgsConstructor
 public class ClientService {
     private final ClientRepository clientRepository;
 
-    public ClientId createOrUpdateClient(Email email, Debt initialDebt) {
+    public ClientService(final ClientRepository clientRepository) {
+        this.clientRepository = clientRepository;
+    }
+
+    public ClientId createClient(Email email, Debt initialDebt) {
         final Client client = clientRepository.create(email, initialDebt);
         return client.getId();
     }
 
-    public void addDebt(ClientId clientId, Debt amount) {
+    public Debt addDebt(ClientId clientId, Debt amount) {
         Client client = clientRepository.get(clientId);
         client.addDebt(amount.getValue());
         clientRepository.update(client);
+        return client.getDebt();
     }
 
     public Debt getClientDebt(ClientId clientId) {
