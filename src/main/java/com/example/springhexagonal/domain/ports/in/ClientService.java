@@ -5,7 +5,6 @@ import com.example.springhexagonal.domain.model.ClientId;
 import com.example.springhexagonal.domain.model.Debt;
 import com.example.springhexagonal.domain.model.Email;
 import com.example.springhexagonal.domain.ports.out.ClientRepository;
-import lombok.RequiredArgsConstructor;
 
 public class ClientService {
     private final ClientRepository clientRepository;

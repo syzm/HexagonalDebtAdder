@@ -3,20 +3,15 @@ package com.example.springhexagonal.adapters.api;
 import com.example.springhexagonal.domain.model.ClientId;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
-class ClientIdResponse {
-
-    private final String id;
-
-    private ClientIdResponse(final String id) {
-        this.id = id;
-    }
+record ClientIdResponse(String id) {
 
     static ClientIdResponse of(final ClientId clientId) {
         return new ClientIdResponse(clientId.getValue());
     }
 
+    @Override
     @JsonProperty("id")
-    String getId() {
+    public String id() {
         return id;
     }
 }

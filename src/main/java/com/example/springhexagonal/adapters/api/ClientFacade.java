@@ -24,7 +24,7 @@ class ClientFacade {
     }
 
     ClientDebtResponse addClientDebt(final String clientId, final ClientDebtUpdateRequest clientDebtUpdateRequest) {
-        final Debt debt = clientService.addDebt(ClientId.of(clientId), Debt.of(clientDebtUpdateRequest.getAddedAmount()));
+        final Debt debt = clientService.addDebt(ClientId.of(clientId), Debt.of(clientDebtUpdateRequest.addedAmount()));
         return ClientDebtResponse.of(debt);
     }
 }

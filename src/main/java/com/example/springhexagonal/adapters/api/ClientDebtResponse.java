@@ -10,7 +10,7 @@ import java.util.Deque;
 class ClientDebtResponse {
     private final BigDecimal debt;
 
-    private ClientDebtResponse(final BigDecimal debt) {
+    ClientDebtResponse(final BigDecimal debt) {
         this.debt = debt;
     }
 

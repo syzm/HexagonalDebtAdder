@@ -3,9 +3,11 @@ package com.example.springhexagonal.adapters.api;
 import com.example.springhexagonal.domain.model.Debt;
 import com.example.springhexagonal.domain.model.Email;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import lombok.Getter;
 
 import java.math.BigDecimal;
 
+@Getter
 class ClientCreationRequest {
     private final String email;
     private final BigDecimal debt;
