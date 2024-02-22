@@ -1,25 +1,19 @@
-package com.example.springhexagonal.adapters.api;
+package com.example.springhexagonal.adapter.rest;
 
-import com.example.springhexagonal.domain.model.ClientId;
 import com.example.springhexagonal.domain.model.Debt;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 import java.math.BigDecimal;
-import java.util.Deque;
 
-class ClientDebtResponse {
-    private final BigDecimal debt;
-
-    ClientDebtResponse(final BigDecimal debt) {
-        this.debt = debt;
-    }
+record ClientDebtResponse(BigDecimal debt) {
 
     static ClientDebtResponse of(final Debt debt) {
         return new ClientDebtResponse(debt.getValue());
     }
 
+    @Override
     @JsonProperty("debt")
-    BigDecimal debt() {
+    public BigDecimal debt() {
         return debt;
     }
 }

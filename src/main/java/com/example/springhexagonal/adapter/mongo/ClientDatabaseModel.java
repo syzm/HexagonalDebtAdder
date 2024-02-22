@@ -1,4 +1,4 @@
-package com.example.springhexagonal.adapters.clientdb;
+package com.example.springhexagonal.adapter.mongo;
 import com.example.springhexagonal.domain.model.Client;
 import com.example.springhexagonal.domain.model.ClientId;
 import com.example.springhexagonal.domain.model.Debt;

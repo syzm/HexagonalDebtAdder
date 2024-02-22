@@ -1,4 +1,4 @@
-package com.example.springhexagonal.adapters.clientdb;
+package com.example.springhexagonal.adapter.mongo;
 
 import org.springframework.data.mongodb.repository.MongoRepository;
 

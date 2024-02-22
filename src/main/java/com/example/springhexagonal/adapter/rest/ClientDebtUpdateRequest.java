@@ -1,4 +1,4 @@
-package com.example.springhexagonal.adapters.api;
+package com.example.springhexagonal.adapter.rest;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 

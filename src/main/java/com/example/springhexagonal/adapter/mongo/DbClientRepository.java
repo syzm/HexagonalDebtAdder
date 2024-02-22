@@ -1,10 +1,10 @@
-package com.example.springhexagonal.adapters.clientdb;
+package com.example.springhexagonal.adapter.mongo;
 
 import com.example.springhexagonal.domain.model.Client;
 import com.example.springhexagonal.domain.model.ClientId;
 import com.example.springhexagonal.domain.model.Debt;
 import com.example.springhexagonal.domain.model.Email;
-import com.example.springhexagonal.domain.ports.out.ClientRepository;
+import com.example.springhexagonal.port.ClientRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Component;
 
