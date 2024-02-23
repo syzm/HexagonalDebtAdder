@@ -2,7 +2,7 @@ package com.example.springhexagonal.adapter.rest;
 
 import com.example.springhexagonal.domain.model.ClientId;
 import com.example.springhexagonal.domain.model.Debt;
-import com.example.springhexagonal.application.ClientService;
+import com.example.springhexagonal.port.ClientService;
 import org.springframework.stereotype.Component;
 
 @Component

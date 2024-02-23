@@ -1,4 +1,4 @@
-package com.example.springhexagonal.application;
+package com.example.springhexagonal.port;
 
 import com.example.springhexagonal.domain.model.Client;
 import com.example.springhexagonal.domain.model.ClientId;
