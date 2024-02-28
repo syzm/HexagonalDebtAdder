@@ -23,12 +23,11 @@ public class ClientServiceImplementation implements ClientService {
         return client.getId();
     }
 
-    @Override
     public Debt addDebt(ClientId clientId, Debt amount) {
         Client client = clientRepository.get(clientId);
         client.addDebt(amount.getValue());
-        clientRepository.update(client);
-        return client.getDebt();
+        Client updatedClient = clientRepository.update(client);
+        return updatedClient.getDebt();
     }
 
     @Override

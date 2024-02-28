@@ -8,5 +8,5 @@ import com.example.springhexagonal.domain.model.Email;
 public interface ClientRepository {
     Client get(ClientId clientId);
     Client create(Email email, Debt debt);
-    void update(Client client);
+    Client update(Client client);
 }

@@ -7,5 +7,5 @@ import com.example.springhexagonal.domain.model.Email;
 public interface ClientService {
     ClientId createClient(Email email, Debt initialDebt);
     Debt addDebt(ClientId clientId, Debt amount);
-    public Debt getClientDebt(ClientId clientId);
+    Debt getClientDebt(ClientId clientId);
 }

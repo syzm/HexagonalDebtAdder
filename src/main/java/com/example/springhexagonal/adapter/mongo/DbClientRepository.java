@@ -30,8 +30,9 @@ class DbClientRepository implements ClientRepository {
     }
 
     @Override
-    public void update(Client client) {
+    public Client update(Client client) {
         ClientDatabaseModel model = ClientDatabaseModel.of(client);
-        repository.save(model);
+        ClientDatabaseModel savedModel = repository.save(model);
+        return savedModel.toDomain();
     }
 }
